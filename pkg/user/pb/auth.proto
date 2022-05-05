@@ -1,0 +1,52 @@
+syntax = "proto3";
+package auth;
+option go_package = "./pkg/auth/pb";
+
+service  AuthService {
+    rpc Register(RegisterReq) returns (Resp){}
+    rpc Update(UpdateReq) returns (Resp){}
+    rpc Delete(DeleteReq) returns (Resp){}
+    rpc FindUser(FindUserReq) returns (FindUserResp){}
+    rpc GetUsers(EmptyReq) returns (GetUsersResp){}
+}
+message EmptyReq {}
+
+message User{
+    string username = 1;
+    string email = 2;
+    string password = 3;
+    Role role = 4;
+    int64 created = 5;
+    int64 modified = 6;
+}
+enum Role {
+    MEMBER = 0;
+    ADMIN = 1;
+}
+message RegisterReq{
+    User user = 1;
+}
+message UpdateReq{
+    string uid = 1;
+    User user = 2;
+}
+message DeleteReq{
+    string uid = 1;
+}
+message Resp{
+    int64 status = 1;
+    string error = 2;
+}
+message FindUserReq{ string id = 1; }
+
+message FindUserResp{
+    int64 status = 1;
+    string error = 2;
+    User user = 3;
+}
+message GetUsersResp{
+    int64 status = 1;
+    string error = 2;
+    repeated User user = 3;
+}
+
