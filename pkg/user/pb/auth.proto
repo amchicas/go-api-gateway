@@ -12,10 +12,11 @@ service  AuthService {
 message EmptyReq {}
 
 message User{
-    string username = 1;
-    string email = 2;
-    string password = 3;
-    Role role = 4;
+    int64 id = 1;
+    string name = 2;
+    string lastname = 3;
+    string derscription = 4;
+    
     int64 created = 5;
     int64 modified = 6;
 }

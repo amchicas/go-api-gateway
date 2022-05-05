@@ -35,7 +35,7 @@ func (h *AuthHandler) Register(c *fiber.Ctx) error {
 
 	}
 
-	req := &pb.RegisterReq{Email: input.Email, Password: input.Password}
+	req := &pb.RegisterReq{Username: input.Username, Email: input.Email, Password: input.Password, Role: 1}
 	res, err := h.authService.Register(customContext, req)
 	if err != nil {
 
@@ -45,11 +45,12 @@ func (h *AuthHandler) Register(c *fiber.Ctx) error {
 }
 
 func (h *AuthHandler) Login(c *fiber.Ctx) error {
-	type LoginInput struct {
+	/*type LoginInput struct {
 		Email    string `json:"email"`
 		Password string `json:"password"`
 	}
-	var input LoginInput
+	*/
+	var input domain.Auth
 	if err := c.BodyParser(&input); err != nil {
 		return c.Status(fiber.StatusBadRequest).JSON(&fiber.Map{"status": "error", "message": "Error on login request", "data": err.Error()})
 	}
@@ -57,7 +58,7 @@ func (h *AuthHandler) Login(c *fiber.Ctx) error {
 	req := &pb.LoginReq{Email: input.Email, Password: input.Password}
 	res, err := h.authService.Login(context.Background(), req)
 	if err != nil {
-		return c.Status(fiber.StatusInternalServerError).JSON(&fiber.Map{"stauts": "error", "message": err.Error()})
+		return c.Status(fiber.StatusInternalServerError).JSON(&fiber.Map{"status": "error", "message": err.Error()})
 	}
 	return c.JSON(&fiber.Map{"status": "success", "result": fmt.Sprint(res.Token)})
 }
