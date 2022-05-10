@@ -1,8 +1,10 @@
 cloud.google.com/go v0.26.0/go.mod h1:aQUYkXzVsufM+DwF1aE+0xfcU+56JwCaLick0ClmMTw=
 cloud.google.com/go v0.34.0/go.mod h1:aQUYkXzVsufM+DwF1aE+0xfcU+56JwCaLick0ClmMTw=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
-github.com/amchicas/go-auth-srv v0.0.0-20220505105254-4671b4254f1a h1:gqIuQ4P6HMbjrgVBiP7HZdFwtnaM+2AhzHPk/PrRyOo=
-github.com/amchicas/go-auth-srv v0.0.0-20220505105254-4671b4254f1a/go.mod h1:lB155jgEAU6A1MOxYpPG5Ep0a/zqunJsvMdM4jlM2s4=
+github.com/amchicas/go-auth-srv v0.0.0-20220510102931-a64cc10bdaba h1:fMvebD9zM1XazpgCOqzAvdoAJHbni7mn5mVPuwEbkL4=
+github.com/amchicas/go-auth-srv v0.0.0-20220510102931-a64cc10bdaba/go.mod h1:lB155jgEAU6A1MOxYpPG5Ep0a/zqunJsvMdM4jlM2s4=
+github.com/amchicas/go-profile-srv v0.0.0-20220510100914-8c7a636c9396 h1:XhZf29yosxtgdgObrrJTDGFTp7kdmfO+oeao9v5RUkA=
+github.com/amchicas/go-profile-srv v0.0.0-20220510100914-8c7a636c9396/go.mod h1:xOqYrASEQVs7LLgYwCVz29iB2cn82GCE96qco/naQKw=
 github.com/andybalholm/brotli v1.0.4 h1:V7DdXeJtZscaqfNuAdSRuRFzuiKlHSC/Zh3zl9qY3JY=
 github.com/andybalholm/brotli v1.0.4/go.mod h1:fO7iG3H7G2nSZ7m0zPUDn85XEX2GTukHGRSepvi9Eig=
 github.com/antihax/optional v1.0.0/go.mod h1:uupD/76wgC+ih3iEmQUL+0Ugr19nfwCT1kdvxnR2qWY=
