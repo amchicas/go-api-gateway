@@ -3,12 +3,11 @@ module github.com/amchicas/go-api-gateway
 go 1.18
 
 require (
-	github.com/amchicas/go-auth-srv v0.0.0-20220510102931-a64cc10bdaba
-	github.com/amchicas/go-profile-srv v0.0.0-20220510100914-8c7a636c9396
+	github.com/amchicas/go-auth-srv v0.0.0-20220512113842-88c96ed37280
+	github.com/amchicas/go-profile-srv v0.0.0-20220510111315-dafe1b965da1
 	github.com/gofiber/fiber/v2 v2.32.0
 	github.com/joho/godotenv v1.4.0
 	google.golang.org/grpc v1.46.0
-	google.golang.org/protobuf v1.28.0
 )
 
 require (
@@ -22,4 +21,5 @@ require (
 	golang.org/x/sys v0.0.0-20220227234510-4e6760a101f9 // indirect
 	golang.org/x/text v0.3.7 // indirect
 	google.golang.org/genproto v0.0.0-20200526211855-cb27e3aa2013 // indirect
+	google.golang.org/protobuf v1.28.0 // indirect
 )

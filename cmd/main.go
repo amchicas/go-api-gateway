@@ -3,10 +3,9 @@ package main
 import (
 	"log"
 
-	"github.com/amchicas/go-api-gateway/pkg/auth/handler"
-	"github.com/amchicas/go-api-gateway/pkg/auth/routes"
-	auth "github.com/amchicas/go-api-gateway/pkg/auth/services"
+	"github.com/amchicas/go-api-gateway/pkg/auth"
 	"github.com/amchicas/go-api-gateway/pkg/config"
+	"github.com/amchicas/go-api-gateway/pkg/profile"
 	fiber "github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/logger"
 )
@@ -19,10 +18,7 @@ func main() {
 	}
 	app := fiber.New()
 	app.Use(logger.New())
-
-	authSrv := auth.InitServiceClient(&c)
-	authHandler := handler.NewAuthHandler(authSrv)
-	routes.RegisterRoutes(app, authHandler)
-
+	authMid := auth.Exec(app, &c)
+	profile.Exec(app, &c, authMid)
 	log.Fatal(app.Listen(c.Port))
 }
