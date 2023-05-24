@@ -4,6 +4,7 @@ go 1.18
 
 require (
 	github.com/amchicas/go-auth-srv v0.0.0-20220512113842-88c96ed37280
+	github.com/amchicas/go-course-srv v0.0.0-20220526133714-85865eef3b6e
 	github.com/amchicas/go-profile-srv v0.0.0-20220510111315-dafe1b965da1
 	github.com/gofiber/fiber/v2 v2.32.0
 	github.com/joho/godotenv v1.4.0
