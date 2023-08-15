@@ -3,24 +3,30 @@ module github.com/amchicas/go-api-gateway
 go 1.18
 
 require (
-	github.com/amchicas/go-auth-srv v0.0.0-20220512113842-88c96ed37280
+	github.com/amchicas/go-auth-srv v0.0.0-20220517145048-ba483163f402
 	github.com/amchicas/go-course-srv v0.0.0-20220526133714-85865eef3b6e
-	github.com/amchicas/go-profile-srv v0.0.0-20220510111315-dafe1b965da1
-	github.com/gofiber/fiber/v2 v2.32.0
-	github.com/joho/godotenv v1.4.0
-	google.golang.org/grpc v1.46.0
+	github.com/amchicas/go-profile-srv v0.0.0-20220517144909-acfd5843d11f
+	github.com/gofiber/fiber/v2 v2.48.0
+	github.com/joho/godotenv v1.5.1
+	google.golang.org/grpc v1.57.0
 )
 
 require (
-	github.com/andybalholm/brotli v1.0.4 // indirect
-	github.com/golang/protobuf v1.5.2 // indirect
-	github.com/klauspost/compress v1.15.0 // indirect
+	github.com/andybalholm/brotli v1.0.5 // indirect
+	github.com/golang/protobuf v1.5.3 // indirect
+	github.com/google/uuid v1.3.0 // indirect
+	github.com/klauspost/compress v1.16.7 // indirect
+	github.com/mattn/go-colorable v0.1.13 // indirect
+	github.com/mattn/go-isatty v0.0.19 // indirect
+	github.com/mattn/go-runewidth v0.0.15 // indirect
+	github.com/rivo/uniseg v0.4.4 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
-	github.com/valyala/fasthttp v1.35.0 // indirect
+	github.com/valyala/fasthttp v1.48.0 // indirect
 	github.com/valyala/tcplisten v1.0.0 // indirect
-	golang.org/x/net v0.0.0-20220225172249-27dd8689420f // indirect
-	golang.org/x/sys v0.0.0-20220227234510-4e6760a101f9 // indirect
-	golang.org/x/text v0.3.7 // indirect
-	google.golang.org/genproto v0.0.0-20200526211855-cb27e3aa2013 // indirect
-	google.golang.org/protobuf v1.28.0 // indirect
+	golang.org/x/net v0.14.0 // indirect
+	golang.org/x/sys v0.11.0 // indirect
+	golang.org/x/text v0.12.0 // indirect
+	google.golang.org/genproto v0.0.0-20230803162519-f966b187b2e5 // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20230814215434-ca7cfce7776a // indirect
+	google.golang.org/protobuf v1.31.0 // indirect
 )
